@@ -18,7 +18,8 @@ while(True):
         #subprocess.call("C:\\Users\\USER\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
         
         subprocess.call("Enter the file location of Zoom.exe here")
-        time.sleep(8)
+       
+        time.sleep(20)
         
         #Locate the position of the join button on the screen
         position = pyautogui.locateOnScreen("buttons\\join_button.png")
