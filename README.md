@@ -21,14 +21,6 @@ It performs the following processes:
 
 NOTE: Meeting Time must be in Hours and Minutes format only!
 
-You will need some libraries before running:
-- Keyboard
-- Time
-- Subprocess
-- Pandas
-- Datetime 
-- Pyautogui
-
 ## What happens behind the scene?
 1. An infinite loop keeps checking the current time of the system using "datetime.now" funtion.
 2. The zoom app is opened using "subprocess.call" funtion as soon as current time matches the time mentioned in "meetingschedule.csv".
