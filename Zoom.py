@@ -14,13 +14,8 @@ while(True):
     if timestr in df.Time.values:
         df_new = df[df['Time'].astype(str).str.contains(timestr)]
         #Open the Zoom app
-        #Example:
-        #subprocess.call("C:\\Users\\USER\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
-        
-        subprocess.call("Enter the file location of Zoom.exe here")
-       
-        time.sleep(20)
-        
+        subprocess.Popen("C:\\Users\\ZEESHAN\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
+        time.sleep(15)
         #Locate the position of the join button on the screen
         position = pyautogui.locateOnScreen("buttons\\join_button.png")
         #Move the cursor to the position of the button
@@ -41,11 +36,11 @@ while(True):
         position = pyautogui.locateOnScreen("buttons\\join_button_2.png")
         pyautogui.moveTo(position)
         pyautogui.click()
-        time.sleep(2)
+        time.sleep(7)
 
         #Reads the Meeting Passcode from the dataframe and enters into the zoom app
         keyboard.write(str(int(df_new.iloc[0,2])))
-        time.sleep(2)
+        time.sleep(3)
 
         #For finally joining the meeting
         position = pyautogui.locateOnScreen("buttons\\join_meeting.png")
