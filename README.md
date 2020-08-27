@@ -23,7 +23,7 @@ NOTE: Meeting Time must be in Hours and Minutes format only!
 
 ## What happens behind the scene?
 1. An infinite loop keeps checking the current time of the system using "datetime.now" funtion.
-2. The zoom app is opened using "subprocess.call" funtion as soon as current time matches the time mentioned in "meetingschedule.csv".
+2. The zoom app is opened using "subprocess.Popen()" funtion as soon as current time matches the time mentioned in "meetingschedule.csv".
 3. "pyautogui.locateOnScreen()" function locates the image of join button on the screen and returns the position.
 4. "pyautogui.moveTo()" moves the cursor to that location.
 5. "pyautogui.click()" performs a click operation.
